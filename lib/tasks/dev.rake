@@ -32,6 +32,7 @@ task sample_data: :environment do
     )
 
     p user.errors.full_messages
+    p user.username
   end
 
   users = User.all
@@ -42,13 +43,13 @@ task sample_data: :environment do
         name: "Trip to #{Faker::Nation.capital_city}",
         location: Faker::Nation.capital_city,
         start_date: Faker::Date.in_date_period,
-        end_date: start_date + 7
+        end_date: Faker::Date.in_date_period
       )
+
+     p trip.errors.full_messages
+     p trip.name
     end 
   end
-
-  p trip.errors.full_messages
-
 
   trips = Trip.all
 
@@ -58,20 +59,22 @@ task sample_data: :environment do
         description: Faker::Beer.brand,
         location: Faker::TvShows::GameOfThrones.city
       )
+    p highlight.errors.full_messages
     end 
   end
 
-  p highlight.errors.full_messages
+
 
   trips.each do |trip|
     rand(3).times do
       participant = trip.own_participants.create(
         name: aker::TvShows::GameOfThrones.character
       )
+      p participant.errors.full_messages
     end 
   end
 
-  p participant.errors.full_messages
+
 
   
 

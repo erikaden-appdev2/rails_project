@@ -29,5 +29,5 @@ class User < ApplicationRecord
 
   validates(:username, { :presence => true, :uniqueness => true })
 
-  has_many :trip, dependent: :destroy 
+  has_many :own_trips, foreign_key: :creator_id, class_name: "Trip", dependent: :destroy
 end
