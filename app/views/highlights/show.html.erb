@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @highlight.description %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @highlight.location %>
+</p>
+
+<p>
+  <strong>Trip:</strong>
+  <%= @highlight.trip_id %>
+</p>
+
+<%= link_to 'Edit', edit_highlight_path(@highlight) %> |
+<%= link_to 'Back', highlights_path %>

@@ -1,0 +1,27 @@
+# == Schema Information
+#
+# Table name: trips
+#
+#  id         :bigint           not null, primary key
+#  end_date   :date
+#  location   :text
+#  name       :text
+#  start_date :date
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  creator_id :integer
+#
+
+one:
+  name: MyText
+  location: MyText
+  start_date: 2021-05-25
+  end_date: 2021-05-25
+  creator_id: 1
+
+two:
+  name: MyText
+  location: MyText
+  start_date: 2021-05-25
+  end_date: 2021-05-25
+  creator_id: 1
