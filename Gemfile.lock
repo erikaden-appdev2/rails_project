@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/faker-ruby/faker.git
+  revision: 3f0ddf95d0905c7bd26409a682b33cec2e79a623
+  branch: master
+  specs:
+    faker (2.18.0)
+      i18n (>= 1.6, < 2)
+
+GIT
   remote: https://github.com/firstdraft/draft_generators.git
   revision: b749884a069c7f06472da628f604c246655d6495
   branch: winter-2020
@@ -146,8 +154,6 @@ GEM
       dry-inflector (~> 0.1, >= 0.1.2)
       dry-logic (~> 1.0, >= 1.0.2)
     erubi (1.10.0)
-    faker (2.17.0)
-      i18n (>= 1.6, < 2)
     ffi (1.15.0)
     git (1.8.1)
       rchardet (~> 1.8)
@@ -395,7 +401,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   devise
   draft_generators!
-  faker
+  faker!
   graphiti (~> 1.2)
   jbuilder (~> 2.7)
   listen (~> 3.3)

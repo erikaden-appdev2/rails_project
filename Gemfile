@@ -62,7 +62,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'active_link_to'
 gem 'awesome_print'
 gem 'devise'
-gem 'faker'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 gem 'graphiti', '~> 1.2'
 gem 'pry-rails'
 gem 'pundit'

@@ -1,0 +1,21 @@
+# == Schema Information
+#
+# Table name: highlights
+#
+#  id          :bigint           not null, primary key
+#  description :text
+#  location    :text
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  trip_id     :integer
+#
+
+one:
+  description: MyText
+  location: MyText
+  trip_id: 1
+
+two:
+  description: MyText
+  location: MyText
+  trip_id: 1
