@@ -38,7 +38,7 @@ task sample_data: :environment do
   users = User.all
 
   users.each do |user|
-    rand(5).times do
+    rand(6).times do
       trip = user.own_trips.create(
         name: "Trip to #{Faker::Nation.capital_city}",
         location: Faker::Nation.capital_city,
@@ -54,7 +54,7 @@ task sample_data: :environment do
   trips = Trip.all
 
   trips.each do |trip|
-    rand(3).times do
+    rand(6).times do
       highlight = trip.own_highlights.create(
         description: Faker::Beer.brand,
         location: Faker::TvShows::GameOfThrones.city
@@ -66,9 +66,9 @@ task sample_data: :environment do
 
 
   trips.each do |trip|
-    rand(3).times do
+    rand(4).times do
       participant = trip.own_participants.create(
-        name: aker::TvShows::GameOfThrones.character
+        name: Faker::TvShows::GameOfThrones.character
       )
       p participant.errors.full_messages
     end 

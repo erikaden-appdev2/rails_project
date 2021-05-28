@@ -12,9 +12,10 @@
 #  creator_id :integer
 #
 class Trip < ApplicationRecord
+  belongs_to :creator, class_name: "User"
+
   validates(:name, { :presence => true })
   has_many :own_photos, foreign_key: :trip_id, class_name: "Photo", dependent: :destroy
   has_many :own_highlights, foreign_key: :trip_id, class_name: "Highlight", dependent: :destroy
   has_many :own_participants, foreign_key: :trip_id, class_name: "Participant", dependent: :destroy
-  belongs_to :user
 end
