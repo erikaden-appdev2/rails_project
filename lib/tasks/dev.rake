@@ -74,7 +74,16 @@ task sample_data: :environment do
     end 
   end
 
+  photo_array = [10,100,1000,1001,1005,1006,1011,1015,1016,1018,1029,1035,1036,1038,1039,1040,1043,1047,1050,1052,1057,1067,116,12,122,129,13,134,136,142,15,162,164,174,177,179,188,191,195,196,203,211,214,218]
 
+  trips.each do |trip|
+    3.times do
+      photo = trip.own_photos.create(
+        url: "https://picsum.photos/id/" + photo_array.sample.to_s + "/200"
+      )
+      p photo.errors.full_messages
+    end 
+  end
 
   
 
