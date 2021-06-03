@@ -21,6 +21,4 @@
   </div>
 </div>
 
-<% @user.own_trips.each do |trip| %>
-  <%= render "trips/trip", trip: trip %>
-<% end %>
+<%= render @user.own_trips %>
